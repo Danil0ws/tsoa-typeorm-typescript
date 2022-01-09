@@ -1,0 +1,17 @@
+# Dependencies
+node_modules
+
+# Serverless
+.serverless
+
+# Webpack
+.webpack
+
+# Output
+dist
+
+.eslintrc.js
+jest.config.ts
+lint-staged.config.js
+jest-unit.config.js
+jest.config.js
