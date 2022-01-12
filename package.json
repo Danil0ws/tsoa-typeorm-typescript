@@ -1,11 +1,13 @@
 {
-   "name": "Tsoa",
+   "name": "tsoa-typeorm-typescript",
    "version": "1.0.0",
-   "main": "build/src/server.js",
+   "main": "dist/server.js",
    "scripts": {
-      "build": "tsoa spec-and-routes && tsc",
       "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\"",
-      "start": "ts-node src/server.ts",
+      "start": "node ./dist/server.js",      
+      "tsoa": "tsoa spec-and-routes",
+      "build": "tsoa spec-and-routes && tsc",
+      "prebuild": "rimraf dist",
       "lint": "eslint --fix --ext .js,.ts .",
       "post:install": "husky install",
       "typeorm": "node --require ts-node/register --experimental-modules ./node_modules/typeorm/cli.js"
